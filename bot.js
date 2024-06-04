@@ -28,7 +28,7 @@ bot.start(async ctx => {
   const imageStream = fs.createReadStream('./public/images/duckhunt.webp');
   const username = ctx.message.from?.username;
   const messageText = `Hi @${username}. This is Duck Hunt Game Bot 👋\n<b>Welcome to Duck Hunt Game App</b>`
-  const gameButton = Markup.button.webApp('🚀 Open Game', process.env.MINIGAMES_WEB_APP_URL);
+  const gameButton = Markup.button.webApp('🚀 Open Game', process.env.GAME_WEB_APP_URL);
   const keyboard = Markup.inlineKeyboard([[gameButton]]);
 
   await ctx.replyWithPhoto({ source: imageStream });
